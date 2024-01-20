@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+/* Set a background color for the body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #DAD299;
+    background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);
+    background: linear-gradient(to right, #B0DAB9, #DAD299);
+    padding: 20px;
+    letter-spacing: 0.1em;
+}
+#top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#links a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: #007BFF;
+    font-weight: 700;
+}
+
+#search {
+    display: flex;
+}
+
+.search-bar {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#search-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+/* Style the main heading */
+h1 {
+    text-align: center;
+    color: #2d962ab0;
+    font-weight: 800;
+    margin-top: 10px;
+    border-bottom: solid;
+    letter-spacing: 0.4em;
+}
+.browse_by {
+    font-weight: 800;
+    color: #007BFF;
+    margin-top: 20px;
+}
+
+.browse_links a {
+    text-decoration: none;
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+
+/* Style the movie table */
+#movie_table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 94%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Style the table headers */
+#movie_table th {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 11px;
+
+}
+
+/* Style the table data cells */
+#movie_table td {
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+/* Center the content in table cells */
+#movie_table td, #movie_table th {
+    text-align: left;
+}
+
+/* Style for the Rating column */
+#movie_table tbody td:last-child {
+    font-weight: bold;
+    color: #ff5733;
+}
+
+/* Style for hyperlinks in Stars column */
+#movie_table tbody td:nth-child(3) a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Hover effect for hyperlinks */
+#movie_table tbody td:nth-child(3) a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+
+/* Style the Back to Main Page button */
+.back-to-main-button {
+    background-color: #6ab49d;
+    position: relative;
+    padding: 8px 17px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgb(132 206 185 / 20%);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    transition: 0.25s;
+    border: 3px solid #6faddf;
+    color: #000000;
+}
+
+.back-to-main-button:hover {
+    background-color: #2ca130;
+    color: #d4dfe6;
+}
+
+.back-to-main-button:active {
+    transform: scale(1.5);
+}
+
+
+.autocomplete-suggestions {
+    border: 1px solid #999;
+    background: #FFF;
+    overflow: auto;
+}
+
+.autocomplete-suggestion {
+    padding: 2px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.autocomplete-selected {
+    background: #F0F0F0;
+}
+
+.autocomplete-suggestions strong {
+    font-weight: normal;
+    color: #3399FF;
+}
+
+.autocomplete-group {
+    padding: 2px 5px;
+}
+
+.autocomplete-group strong {
+    display: block;
+    border-bottom: 1px solid #000;
+}
+
+/* Add these styles for the autocomplete searchbox */
+.autocomplete-searchbox {
+    height: 50px;
+    width: 600px;
+}
+
+/* Style for the movie_info section */
+#movie_info {
+    font-weight: 400;
+    text-align: left;
+    font-size: 45px;
+    margin: 30px 0;
+    color: #005090;
+}
+
+/* Style for the movie_info_table */
+#movie_info_table {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Style for table headers */
+#movie_info_table thead th {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Style for table rows */
+#movie_info_table tbody {
+    background-color: #ffffff94;
+}
+
+/* Style for table cells */
+#movie_info_table tbody td {
+    vertical-align: center;
+}
+
+/* Style for the Rating column */
+#movie_info_table tbody td:last-child {
+    font-weight: bold;
+    color: #ff5733;
+}
+
+/* Style for hyperlinks in Stars column */
+#movie_info_table tbody td:nth-child(3) a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Hover effect for hyperlinks */
+#movie_info_table tbody td:nth-child(3) a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+#single_star_table {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+#single_star_table_body {
+    background-color: #ffffff94;
+}

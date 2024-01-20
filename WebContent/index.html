@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Movie Browsing</title>
+
+
+    <!-- Combined and Minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="top-bar">
+    <!-- Navigation Links -->
+    <div id="links">
+        <a href="index.html" class="back-to-main-button">Main</a>
+        <a href="movies.html" class="top-20-button">Top 20</a>
+        <a href="results.html">Movie List Page</a>
+        <a href="cart.html">Checkout</a>
+    </div>
+    <!-- full-search Bars -->
+    <form id="full-search" method="POST" action="#">
+        <label>
+            <input name="title" type="text" id="full-search-bar" class="full-search-bar" placeholder="full-search" value="">
+        </label>
+        <!-- full-search Button -->
+        <input type="submit" id="full-search-button" value="Search">
+    </form>
+
+</div>
+
+<h1 id="welcome_message">Welcome to Fabflix!</h1>
+<!-- Search Bars -->
+<form id="search" method="POST" action="#">
+    <label>
+        <input name="title" type="text" class="search-bar" placeholder="Title" value="">
+    </label>
+    <label>
+        <input name="year" type="number" class="search-bar" placeholder="Year" value="">
+    </label>
+    <label>
+        <input name="director" type="text" class="search-bar" placeholder="Director" value="">
+    </label>
+    <label>
+        <input name="star" type="text" class="search-bar" placeholder="Star" value="">
+    </label>
+    <!-- Search Button -->
+    <input type="submit" id="search-button" value="Search">
+</form>
+
+<!-- Browse By Genre -->
+<h2 class="browse_by">Browse By Genre</h2>
+<div class="browse_links" id="browse_genre_links">
+    <!-- Dynamic Links for Genres will be inserted here -->
+</div>
+
+<h2 class="browse_by">Browse By Movie Title</h2>
+<div class="browse_links" id="browse_prefix_links">
+    <div class="letters">
+        <a href="results.html?genre=&prefix=A">A</a>
+        <a href="results.html?genre=&prefix=B">B</a>
+        <a href="results.html?genre=&prefix=C">C</a>
+        <a href="results.html?genre=&prefix=D">D</a>
+        <a href="results.html?genre=&prefix=E">E</a>
+        <a href="results.html?genre=&prefix=F">F</a>
+        <a href="results.html?genre=&prefix=G">G</a>
+        <a href="results.html?genre=&prefix=H">H</a>
+        <a href="results.html?genre=&prefix=I">I</a>
+        <a href="results.html?genre=&prefix=J">J</a>
+        <a href="results.html?genre=&prefix=K">K</a>
+        <a href="results.html?genre=&prefix=L">L</a>
+        <a href="results.html?genre=&prefix=M">M</a>
+        <a href="results.html?genre=&prefix=N">N</a>
+        <a href="results.html?genre=&prefix=O">O</a>
+        <a href="results.html?genre=&prefix=P">P</a>
+        <a href="results.html?genre=&prefix=Q">Q</a>
+        <a href="results.html?genre=&prefix=R">R</a>
+        <a href="results.html?genre=&prefix=S">S</a>
+        <a href="results.html?genre=&prefix=T">T</a>
+        <a href="results.html?genre=&prefix=U">U</a>
+        <a href="results.html?genre=&prefix=V">V</a>
+        <a href="results.html?genre=&prefix=W">W</a>
+        <a href="results.html?genre=&prefix=X">X</a>
+        <a href="results.html?genre=&prefix=Y">Y</a>
+        <a href="results.html?genre=&prefix=Z">Z</a>
+    </div>
+    <div class = "numbers-asterisk">
+        <a href="results.html?genre=&prefix=0">0</a>
+        <a href="results.html?genre=&prefix=1">1</a>
+        <a href="results.html?genre=&prefix=2">2</a>
+        <a href="results.html?genre=&prefix=3">3</a>
+        <a href="results.html?genre=&prefix=4">4</a>
+        <a href="results.html?genre=&prefix=5">5</a>
+        <a href="results.html?genre=&prefix=6">6</a>
+        <a href="results.html?genre=&prefix=7">7</a>
+        <a href="results.html?genre=&prefix=8">8</a>
+        <a href="results.html?genre=&prefix=9">9</a>
+        <a href="results.html?genre=&prefix=*">*</a>
+    </div>
+</div>
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+
+
+<!-- Include your own JS file -->
+<script src="index.js"></script>
+</body>
+</html>

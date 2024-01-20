@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabflix Dashboard</title>
+    <!-- Add your CSS stylesheets, Bootstrap, or other styling libraries here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<header>
+    <!-- Add header content if needed -->
+    <h1>Fabflix Dashboard</h1>
+</header>
+
+<nav>
+    <!-- Add navigation links or menu if needed -->
+    <ul>
+        <li><a href="#section-stars">Stars</a></li>
+        <li><a href="#section-add-movie">Add Movie</a></li>
+        <li><a href="#section-metadata">Metadata</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="section-stars">
+        <h2>Manage Stars</h2>
+        <form id="add_star_form" action="/fabflix/_dashboard" method="post">
+            <!-- Add content for adding new stars -->
+            <input type="hidden" name="action" value="addStar"> <!-- New hidden field to specify the action -->
+            <label for="starName">Star Name:</label>
+            <input type="text" id="starName" name="starName" required>
+            <label for="birthYear">Birth Year:</label>
+            <input type="text" id="birthYear" name="birthYear">
+            <button type="submit">Add Star</button>
+        </form>
+    </section>
+
+    <section id="section-add-movie">
+        <h2>Add New Movie</h2>
+        <form id="add_movie_form" action="/fabflix/_dashboard" method="post">
+            <!-- Add content for adding new movies -->
+            <input type="hidden" name="action" value="addMovie"> <!-- New hidden field to specify the action -->
+            <label for="movieTitle">Movie Title:</label>
+            <input type="text" id="movieTitle" name="movieTitle" required>
+            <label for="movieYear">Year:</label>
+            <input type="text" id="movieYear" name="movieYear" required>
+            <label for="movieDirector">Director:</label>
+            <input type="text" id="movieDirector" name="movieDirector" required>
+            <label for="starNameMovie">Star Name:</label>
+            <input type="text" id="starNameMovie" name="starName" required>
+            <label for="genreName">Genre Name:</label>
+            <input type="text" id="genreName" name="genreName" required>
+            <button type="submit">Add Movie</button>
+        </form>
+    </section>
+
+
+    <section id="section-metadata">
+        <!-- Add content for displaying metadata -->
+        <h2>Database Metadata</h2>
+        <!-- Include content to display database metadata -->
+        <table border="1">
+            <tr>
+                <th>Table</th>
+                <th>Attribute</th>
+                <th>Type</th>
+            </tr>
+            <!-- Movies Table -->
+            <tr>
+                <td rowspan="4">movies</td>
+                <td>id</td>
+                <td>VARCHAR(10)</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>VARCHAR(100)</td>
+            </tr>
+            <tr>
+                <td>year</td>
+                <td>INTEGER</td>
+            </tr>
+            <tr>
+                <td>director</td>
+                <td>VARCHAR(100)</td>
+            </tr>
+
+            <!-- Stars Table -->
+            <tr>
+                <td rowspan="3">stars</td>
+                <td>id</td>
+                <td>VARCHAR(10)</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>VARCHAR(100)</td>
+            </tr>
+            <tr>
+                <td>birthYear</td>
+                <td>INTEGER DEFAULT NULL</td>
+            </tr>
+
+            <!-- stars_in_movies Table -->
+            <tr>
+                <td rowspan="2">stars_in_movies</td>
+                <td>starId</td>
+                <td>VARCHAR(10)</td>
+            </tr>
+            <tr>
+                <td>movieId</td>
+                <td>VARCHAR(10)</td>
+            </tr>
+
+            <!-- genres Table -->
+            <tr>
+                <td rowspan="2">genres</td>
+                <td>id</td>
+                <td>INTEGER AUTO_INCREMENT</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>VARCHAR(32)</td>
+            </tr>
+
+            <!-- genres_in_movies Table -->
+            <tr>
+                <td rowspan="2">genres_in_movies</td>
+                <td>genreId</td>
+                <td>INTEGER</td>
+            </tr>
+            <tr>
+                <td>movieId</td>
+                <td>VARCHAR(10)</td>
+            </tr>
+
+            <!-- creditcards Table -->
+            <tr>
+                <td rowspan="4">creditcards</td>
+                <td>id</td>
+                <td>VARCHAR(20)</td>
+            </tr>
+            <tr>
+                <td>firstName</td>
+                <td>VARCHAR(50)</td>
+            </tr>
+            <tr>
+                <td>lastName</td>
+                <td>VARCHAR(50)</td>
+            </tr>
+            <tr>
+                <td>expiration</td>
+                <td>DATE</td>
+            </tr>
+
+            <!-- customers Table -->
+            <tr>
+                <td rowspan="6">customers</td>
+                <td>id</td>
+                <td>INTEGER AUTO_INCREMENT</td>
+            </tr>
+            <tr>
+                <td>firstName</td>
+                <td>VARCHAR(50)</td>
+            </tr>
+            <tr>
+                <td>lastName</td>
+                <td>VARCHAR(50)</td>
+            </tr>
+            <tr>
+                <td>ccId</td>
+                <td>VARCHAR(20)</td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td>VARCHAR(200)</td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td>VARCHAR(50)</td>
+            </tr>
+
+            <!-- sales Table -->
+            <tr>
+                <td rowspan="4">sales</td>
+                <td>id</td>
+                <td>INTEGER AUTO_INCREMENT</td>
+            </tr>
+            <tr>
+                <td>customerId</td>
+                <td>INTEGER</td>
+            </tr>
+            <tr>
+                <td>movieId</td>
+                <td>VARCHAR(20)</td>
+            </tr>
+            <tr>
+                <td>saleDate</td>
+                <td>DATE</td>
+            </tr>
+
+            <!-- ratings Table -->
+            <tr>
+                <td rowspan="3">ratings</td>
+                <td>movieId</td>
+                <td>VARCHAR(10)</td>
+            </tr>
+            <tr>
+                <td>rating</td>
+                <td>FLOAT</td>
+            </tr>
+            <tr>
+                <td>numVotes</td>
+                <td>INTEGER</td>
+            </tr>
+
+            <!-- employees Table -->
+            <tr>
+                <td rowspan="3">employees</td>
+                <td>email</td>
+                <td>VARCHAR(50) PRIMARY KEY</td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>VARCHAR(20) NOT NULL</td>
+            </tr>
+            <tr>
+                <td>fullname</td>
+                <td>VARCHAR(100)</td>
+            </tr>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <!-- Add footer content if needed -->
+    <p>&copy; 2023 Fabflix Dashboard</p>
+</footer>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+<!-- Add your JavaScript scripts or include jQuery or other libraries here -->
+<script src="./_dashboard.js"></script>
+</body>
+</html>

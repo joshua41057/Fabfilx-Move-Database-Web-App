@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+<div id="top-bar">
+    <!-- Navigation Links -->
+    <div id="links">
+        <a href="index.html" class="back-to-main-button">Main</a>
+        <a href="movies.html" class="top-20-button">Top 20</a>
+        <a href="results.html">Movie List Page</a>
+        <a href="cart.html">Checkout</a>
+    </div>
+
+    <!-- Search Form -->
+    <form id="search" method="POST" action="#">
+        <label>
+            <input name="title" type="text" class="search-bar" placeholder="Title" value="">
+        </label>
+        <label>
+            <input name="year" type="number" class="search-bar" placeholder="Year" value="">
+        </label>
+        <label>
+            <input name="director" type="text" class="search-bar" placeholder="Director" value="">
+        </label>
+        <label>
+            <input name="star" type="text" class="search-bar" placeholder="Star" value="">
+        </label>
+        <!-- Search Button -->
+        <input type="submit" id="search-button" value="Search">
+    </form>
+</div>
+
+<div id="shopping_header">
+    <h1>Shopping Cart</h1>
+    <a href="checkout.html"><button>Go To Checkout</button></a>
+</div>
+
+<!-- Table for Cart Items -->
+<table id="movies_table" class="table table-striped">
+    <thead>
+    <tr id="table_first_row">
+        <th>Title</th>
+        <th>Quantity of Title</th>
+        <th>Delete</th>
+        <th>Price of Title</th>
+        <th>Total Price</th>
+    </tr>
+    </thead>
+    <tbody id="cart_table_body"></tbody>
+</table>
+
+<div id="total_cart_price"></div>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load your custom JavaScript file -->
+<script src="cart.js"></script>
+</body>
+</html>
