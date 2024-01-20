@@ -3,8 +3,6 @@
 
   - #### Names: Joshua J Yoo
 
-  - #### Project 5 Video Demo Link: [pj5]([https://www.youtube.com/@jjy0410](https://youtu.be/yGIK5BOVGs4)
-
   - #### Instruction of deployment:
 Ensure you've populated your 'moviedb' database with the movie-data.sql file if you haven't already.
 
@@ -61,15 +59,15 @@ python log_processing.py <pathtofile>
 
 - # JMeter TS/TJ Time Measurement Report
 
-| **Single-instance Version Test Plan**          | **Graph Results Screenshot** | **Average Query Time(ms)** | **Average Search Servlet Time(ms)** | **Average JDBC Time(ms)** | **Analysis** |
-|------------------------------------------------|------------------------|----------------------------|-------------------------------------|---------------------------|--------------|
-| Case 1: HTTP/1 thread                          | ![](img.png) | 231                        | 6.325                                  |      3.414                |         |
-| Case 2: HTTP/10 threads                        | ![](img_1.png) | 312                        | 5.751                                  |         3.107             |         |
-| Case 3: HTTPS/10 threads                       | ![](img_2.png) | 540                        | 6.331                                   |         3.731            |         |
-| Case 4: HTTP/10 threads/No connection pooling  | ![](img_3.png) | 331                        | 51.220                                  |         5.851            |         |
+| **Single-instance Version Test Plan**          | **Graph Results Screenshot** | **Average Query Time(ms)** | **Average Search Servlet Time(ms)** | **Average JDBC Time(ms)** |
+|------------------------------------------------|------------------------|----------------------------|-------------------------------------|---------------------------|
+| Case 1: HTTP/1 thread                          | ![](img.png) | 231                        | 6.325                                  |      3.414                |
+| Case 2: HTTP/10 threads                        | ![](img_1.png) | 312                        | 5.751                                  |         3.107             | 
+| Case 3: HTTPS/10 threads                       | ![](img_2.png) | 540                        | 6.331                                   |         3.731            |
+| Case 4: HTTP/10 threads/No connection pooling  | ![](img_3.png) | 331                        | 51.220                                  |         5.851            |
 
-| **Scaled Version Test Plan**                   | **Graph Results Screenshot** | **Average Query Time(ms)** | **Average Search Servlet Time(ms)** | **Average JDBC Time(ms)** | **Analysis** |
-|------------------------------------------------|------------------------------|----------------------------|-------------------------------------|---------------------------|--------|
-| Case 1: HTTP/1 thread                          | ![](path to image in img/)   | 227                        | 3.225                               | 1.776                     |        |
-| Case 2: HTTP/10 threads                        | ![](path to image in img/)   | 287                        | 3.641                               | 2.017                     |        |
-| Case 3: HTTP/10 threads/No connection pooling  | ![](path to image in img/)   | 324                        | 37.512                              | 5.195                     |        |
+| **Scaled Version Test Plan**                  | **Average Query Time(ms)** | **Average Search Servlet Time(ms)** | **Average JDBC Time(ms)** |
+|------------------------------------------------|----------------------------|-------------------------------------|---------------------------|
+| Case 1: HTTP/1 thread                          | 227                        | 3.225                               | 1.776                     |
+| Case 2: HTTP/10 threads                        | 287                        | 3.641                               | 2.017                     |
+| Case 3: HTTP/10 threads/No connection pooling | 324                        | 37.512                              | 5.195                     |
