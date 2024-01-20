@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="top-bar">
+    <!-- Links -->
+    <div id="links">
+        <a href="index.html" class="back-to-main-button">Main</a>
+        <a href="movies.html" class="top-20-button">Top 20</a>
+        <a href="results.html">Movie List Page</a>
+        <a href="cart.html">Checkout</a>
+    </div>
+</div>
+
+<h1 id="results_text"></h1>
+
+<div id="sorting_and_pagination">
+    <form id="sort_form" method="POST" action="#">
+        <label for="sorting_option">Sort by:</label>
+        <select id="sorting_option" name="sort">
+            <option value="0">Title ↑, Rating ↑</option>
+            <option value="1">Title ↑, Rating ↓</option>
+            <option value="2">Title ↓, Rating ↑</option>
+            <option value="3">Title ↓, Rating ↓</option>
+            <option value="4">Rating ↑, Title ↑</option>
+            <option value="5">Rating ↑, Title ↓</option>
+            <option value="6">Rating ↓, Title ↑</option>
+            <option value="7">Rating ↓, Title ↓</option>
+        </select>
+
+        <label for="num_results_per_page">Movies Per Page:</label>
+        <select id="num_results_per_page" name="n">
+            <option value="10">10 Results</option>
+            <option value="25">25 Results</option>
+            <option value="50">50 Results</option>
+            <option value="100">100 Results</option>
+        </select>
+
+        <input type="submit" id="sorting_submit" value="Submit">
+    </form>
+</div>
+
+<!-- Table for displaying search results -->
+<table id="results_table" class="table table-striped">
+    <thead>
+    <tr id="results_table_first_row">
+        <th>Title</th>
+        <th>Year</th>
+        <th>Director</th>
+        <th>Genres</th>
+        <th>Stars</th>
+        <th>Rating</th>
+        <th>Cart</th>
+    </tr>
+    </thead>
+    <tbody id="results_table_body"></tbody>
+</table>
+
+<div id="previous_next_buttons">
+    <button id="previous_page" type="button" onclick="submitPageChange(-1)">Previous Page</button>
+    <label for="page_number_display">Page Number:</label>
+    <input name="page_number" id="page_number_display" type="text" value="1" readonly>
+    <button id="next_page" type="button" onclick="submitPageChange(1)">Next Page</button>
+</div>
+
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Include your own JS file -->
+<script src="./results.js"></script>
+</body>
+</html>
